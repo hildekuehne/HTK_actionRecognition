@@ -30,11 +30,17 @@ CONTENT:
 -------------------------------------- 
 
 Part 0 : Short Version
+
 Part I : Installation
+
 Part II : Set environmental variables
+
 Part III : Run the demo
+
 Part IV : Evaluation
+
 Part V : Parameter adaption 
+
 Part VI : Other file input and output description
 
 
