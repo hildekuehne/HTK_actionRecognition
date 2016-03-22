@@ -56,7 +56,7 @@ Step 3) Download the  training and test data ( https://uni-bonn.sciebo.de/index.
 
 Step 4) Adapt the path in the ./HTK_actionRecognition/matlab_wrapper/get_htk_path.m function to your HTK local configuration.  
 
-Step 5) Adapt the path in the ./HTK_actionRecognition/matlab_wrapper/demo_breakfast/demo_breakfast.m script to the full path of your local configuration  (line 7: path_root = '<YouPathHere>/HTK_actionRecognition/demo_breakfast'; )
+Step 5) Adapt the path in the ./HTK_actionRecognition/demo_breakfast/demo_breakfast.m script to the full path of your local configuration  (line 7: path_root = '<YouPathHere>/HTK_actionRecognition/demo_breakfast'; )
 
 Step 6) Run the demo by simply running the script: 
 > demo_breakfast
