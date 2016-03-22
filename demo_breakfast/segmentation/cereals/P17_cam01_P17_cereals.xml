@@ -1,0 +1,8 @@
+<MotionLabeling author="Hilde Kuehne" motionFile="P17\P17_cereals.avi.labels" motionFilePathType="first parent" motionFileType=".avi" motionSequenceName="P17" segType="Manual Multi Segmentation" segmentationCriteria="MotionSequenceLabel_ADLDataset_17_12_2010_h.xml"> 
+<Limb name="whole_body"> 
+<MotionLabel name="SIL" startPoint="1" endPoint="39"/> 
+<MotionLabel name="pour_cereals" startPoint="40" endPoint="322"/> 
+<MotionLabel name="pour_milk" startPoint="323" endPoint="521"/> 
+<MotionLabel name="SIL" startPoint="522" endPoint="624"/> 
+</Limb> 
+</MotionLabeling> 
