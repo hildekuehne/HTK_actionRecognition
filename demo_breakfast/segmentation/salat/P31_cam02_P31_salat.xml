@@ -1,0 +1,29 @@
+<MotionLabeling author="Hilde Kuehne" motionFile="P31\P31_salat.avi.labels" motionFilePathType="first parent" motionFileType=".avi" motionSequenceName="P31" segType="Manual Multi Segmentation" segmentationCriteria="MotionSequenceLabel_ADLDataset_17_12_2010_h.xml"> 
+<Limb name="whole_body"> 
+<MotionLabel name="SIL" startPoint="1" endPoint="454"/> 
+<MotionLabel name="peel_fruit" startPoint="455" endPoint="1029"/> 
+<MotionLabel name="cut_fruit" startPoint="1030" endPoint="1154"/> 
+<MotionLabel name="put_fruit2bowl" startPoint="1155" endPoint="1184"/> 
+<MotionLabel name="peel_fruit" startPoint="1185" endPoint="1289"/> 
+<MotionLabel name="cut_fruit" startPoint="1290" endPoint="1429"/> 
+<MotionLabel name="put_fruit2bowl" startPoint="1430" endPoint="1464"/> 
+<MotionLabel name="peel_fruit" startPoint="1465" endPoint="1749"/> 
+<MotionLabel name="cut_fruit" startPoint="1750" endPoint="1854"/> 
+<MotionLabel name="put_fruit2bowl" startPoint="1855" endPoint="1884"/> 
+<MotionLabel name="peel_fruit" startPoint="1885" endPoint="2104"/> 
+<MotionLabel name="cut_fruit" startPoint="2105" endPoint="2334"/> 
+<MotionLabel name="put_fruit2bowl" startPoint="2335" endPoint="2377"/> 
+<MotionLabel name="peel_fruit" startPoint="2378" endPoint="3557"/> 
+<MotionLabel name="put_fruit2bowl" startPoint="3558" endPoint="3607"/> 
+<MotionLabel name="peel_fruit" startPoint="3608" endPoint="3937"/> 
+<MotionLabel name="cut_fruit" startPoint="3938" endPoint="4102"/> 
+<MotionLabel name="put_fruit2bowl" startPoint="4103" endPoint="4142"/> 
+<MotionLabel name="peel_fruit" startPoint="4143" endPoint="4762"/> 
+<MotionLabel name="cut_fruit" startPoint="4763" endPoint="4917"/> 
+<MotionLabel name="put_fruit2bowl" startPoint="4918" endPoint="4967"/> 
+<MotionLabel name="peel_fruit" startPoint="4968" endPoint="5297"/> 
+<MotionLabel name="cut_fruit" startPoint="5298" endPoint="5407"/> 
+<MotionLabel name="put_fruit2bowl" startPoint="5408" endPoint="5457"/> 
+<MotionLabel name="SIL" startPoint="5458" endPoint="5697"/> 
+</Limb> 
+</MotionLabeling> 

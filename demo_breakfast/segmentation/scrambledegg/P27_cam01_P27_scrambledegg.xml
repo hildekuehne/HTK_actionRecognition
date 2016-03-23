@@ -1,0 +1,14 @@
+<MotionLabeling author="Hilde Kuehne" motionFile="P27\P27_scrambledegg.avi.labels" motionFilePathType="first parent" motionFileType=".avi" motionSequenceName="P27" segType="Manual Multi Segmentation" segmentationCriteria="MotionSequenceLabel_ADLDataset_17_12_2010_h.xml"> 
+<Limb name="whole_body"> 
+<MotionLabel name="SIL" startPoint="1" endPoint="11"/> 
+<MotionLabel name="crack_egg" startPoint="12" endPoint="184"/> 
+<MotionLabel name="add_saltnpepper" startPoint="185" endPoint="443"/> 
+<MotionLabel name="stir_egg" startPoint="444" endPoint="1030"/> 
+<MotionLabel name="pour_oil" startPoint="1031" endPoint="1309"/> 
+<MotionLabel name="pour_egg2pan" startPoint="1310" endPoint="1922"/> 
+<MotionLabel name="stirfry_egg" startPoint="1923" endPoint="2879"/> 
+<MotionLabel name="take_plate" startPoint="2880" endPoint="2986"/> 
+<MotionLabel name="put_egg2plate" startPoint="2987" endPoint="3490"/> 
+<MotionLabel name="SIL" startPoint="3491" endPoint="3564"/> 
+</Limb> 
+</MotionLabeling> 

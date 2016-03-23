@@ -1,0 +1,11 @@
+<MotionLabeling author="Hilde Kuehne" motionFile="P06\P06_sandwich.avi.labels" motionFilePathType="first parent" motionFileType=".avi" motionSequenceName="P06" segType="Manual Multi Segmentation" segmentationCriteria="MotionSequenceLabel_ADLDataset_17_12_2010_h.xml"> 
+<Limb name="whole_body"> 
+<MotionLabel name="SIL" startPoint="1" endPoint="58"/> 
+<MotionLabel name="cut_bun" startPoint="59" endPoint="327"/> 
+<MotionLabel name="take_topping" startPoint="328" endPoint="538"/> 
+<MotionLabel name="smear_butter" startPoint="539" endPoint="1579"/> 
+<MotionLabel name="put_toppingOnTop" startPoint="1580" endPoint="2352"/> 
+<MotionLabel name="put_bunTogether" startPoint="2353" endPoint="2423"/> 
+<MotionLabel name="SIL" startPoint="2424" endPoint="2507"/> 
+</Limb> 
+</MotionLabeling> 

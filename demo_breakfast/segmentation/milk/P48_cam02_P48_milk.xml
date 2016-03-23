@@ -1,0 +1,9 @@
+<MotionLabeling author="Hilde Kuehne" motionFile="P48\P48_milk.avi.labels" motionFilePathType="first parent" motionFileType=".avi" motionSequenceName="P48" segType="Manual Multi Segmentation" segmentationCriteria="MotionSequenceLabel_ADLDataset_17_12_2010_h.xml"> 
+<Limb name="whole_body"> 
+<MotionLabel name="SIL" startPoint="1" endPoint="80"/> 
+<MotionLabel name="pour_milk" startPoint="81" endPoint="340"/> 
+<MotionLabel name="spoon_powder" startPoint="341" endPoint="600"/> 
+<MotionLabel name="stir_milk" startPoint="601" endPoint="780"/> 
+<MotionLabel name="SIL" startPoint="781" endPoint="797"/> 
+</Limb> 
+</MotionLabeling> 

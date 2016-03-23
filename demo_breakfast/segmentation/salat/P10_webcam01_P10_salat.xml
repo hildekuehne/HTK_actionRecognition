@@ -1,0 +1,17 @@
+<MotionLabeling author="Hilde Kuehne" motionFile="P10\P10_salat.avi.labels" motionFilePathType="first parent" motionFileType=".avi" motionSequenceName="P10" segType="Manual Multi Segmentation" segmentationCriteria="MotionSequenceLabel_ADLDataset_17_12_2010_h.xml"> 
+<Limb name="whole_body"> 
+<MotionLabel name="SIL" startPoint="1" endPoint="222"/> 
+<MotionLabel name="take_bowl" startPoint="223" endPoint="382"/> 
+<MotionLabel name="cut_fruit" startPoint="383" endPoint="2502"/> 
+<MotionLabel name="put_fruit2bowl" startPoint="2503" endPoint="2632"/> 
+<MotionLabel name="cut_fruit" startPoint="2633" endPoint="2852"/> 
+<MotionLabel name="put_fruit2bowl" startPoint="2853" endPoint="2942"/> 
+<MotionLabel name="cut_fruit" startPoint="2943" endPoint="3807"/> 
+<MotionLabel name="put_fruit2bowl" startPoint="3808" endPoint="3852"/> 
+<MotionLabel name="cut_fruit" startPoint="3853" endPoint="3952"/> 
+<MotionLabel name="put_fruit2bowl" startPoint="3953" endPoint="3982"/> 
+<MotionLabel name="cut_fruit" startPoint="3983" endPoint="4547"/> 
+<MotionLabel name="put_fruit2bowl" startPoint="4548" endPoint="4582"/> 
+<MotionLabel name="SIL" startPoint="4583" endPoint="4853"/> 
+</Limb> 
+</MotionLabeling> 

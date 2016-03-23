@@ -1,0 +1,8 @@
+<MotionLabeling author="Hilde Kuehne" motionFile="P27\P27_tea.avi.labels" motionFilePathType="first parent" motionFileType=".avi" motionSequenceName="P27" segType="Manual Multi Segmentation" segmentationCriteria="MotionSequenceLabel_ADLDataset_17_12_2010_h.xml"> 
+<Limb name="whole_body"> 
+<MotionLabel name="SIL" startPoint="1" endPoint="331"/> 
+<MotionLabel name="add_teabag" startPoint="332" endPoint="566"/> 
+<MotionLabel name="pour_water" startPoint="567" endPoint="896"/> 
+<MotionLabel name="SIL" startPoint="897" endPoint="947"/> 
+</Limb> 
+</MotionLabeling> 

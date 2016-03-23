@@ -1,0 +1,14 @@
+<MotionLabeling author="Hilde Kuehne" motionFile="P35\P35_pancake.avi.labels" motionFilePathType="first parent" motionFileType=".avi" motionSequenceName="P35" segType="Manual Multi Segmentation" segmentationCriteria="MotionSequenceLabel_ADLDataset_17_12_2010_h.xml"> 
+<Limb name="whole_body"> 
+<MotionLabel name="SIL" startPoint="1" endPoint="1"/> 
+<MotionLabel name="crack_egg" startPoint="2" endPoint="245"/> 
+<MotionLabel name="pour_flour" startPoint="246" endPoint="413"/> 
+<MotionLabel name="pour_milk" startPoint="414" endPoint="543"/> 
+<MotionLabel name="stir_dough" startPoint="544" endPoint="961"/> 
+<MotionLabel name="pour_oil" startPoint="962" endPoint="1037"/> 
+<MotionLabel name="pour_dough2pan" startPoint="1038" endPoint="1238"/> 
+<MotionLabel name="fry_pancake" startPoint="1239" endPoint="3366"/> 
+<MotionLabel name="put_pancake2plate" startPoint="3367" endPoint="3444"/> 
+<MotionLabel name="SIL" startPoint="3445" endPoint="3509"/> 
+</Limb> 
+</MotionLabeling> 

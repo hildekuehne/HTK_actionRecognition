@@ -1,0 +1,12 @@
+<MotionLabeling author="Hilde Kuehne" motionFile="P34\P34_salat.avi.labels" motionFilePathType="first parent" motionFileType=".avi" motionSequenceName="P34" segType="Manual Multi Segmentation" segmentationCriteria="MotionSequenceLabel_ADLDataset_17_12_2010_h.xml"> 
+<Limb name="whole_body"> 
+<MotionLabel name="SIL" startPoint="1" endPoint="60"/> 
+<MotionLabel name="cut_fruit" startPoint="61" endPoint="1010"/> 
+<MotionLabel name="put_fruit2bowl" startPoint="1011" endPoint="1075"/> 
+<MotionLabel name="cut_fruit" startPoint="1076" endPoint="1240"/> 
+<MotionLabel name="cut_fruit" startPoint="1241" endPoint="1835"/> 
+<MotionLabel name="put_fruit2bowl" startPoint="1836" endPoint="1885"/> 
+<MotionLabel name="stir_fruit" startPoint="1886" endPoint="1965"/> 
+<MotionLabel name="SIL" startPoint="1966" endPoint="2243"/> 
+</Limb> 
+</MotionLabeling> 
