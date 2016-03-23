@@ -20,10 +20,28 @@
 # HTK_actionRecognition
 Matlab demo for action recognition with HTK
 
-This package contains a set of helper-functions to support action recognition with HTK in Matlab.  
+This package contains a set of helper-functions to support action recognition with HTK in Matlab. A detailed description of the system i.e. how activity classification, temporal video segmentation and action detection works with ASR enignes is given here:
+
+http://pages.iai.uni-bonn.de/kuehne_hilde/projects/end2end/index.html
+
+and here:
+
+http://serre-lab.clps.brown.edu/resource/breakfast-actions-dataset/
+
+If you use this code in your project, please cite:
+
+@InProceedings{Kuehne16end,
+author = {Hilde Kuehne and Juergen Gall and Thomas Serre},
+title = {An end-to-end generative framework for video segmentation and recognition},
+booktitle = {Proc. IEEE Winter Applications of Computer Vision Conference (WACV 16)},
+year = {2016},
+month = {Mar},
+address = {Lake Placid},
+}
+
 The code is free for any personal or academic use under GNU-GPL without any warranty. Please regard licensing of third-party packages.
 
-The functions have been tested under Win and Linux so far. Any comments and recommendations are always welcome. Please contact me under kuehne@iai.uni-bonn.de
+The functions have been tested under Win (with HTK 3.4) and Linux (HTK 3.5). Any questions, comments and recommendations are always welcome. Please contact me under kuehne@iai.uni-bonn.de
 
 -------------------------------------- 
 CONTENT:
@@ -41,7 +59,7 @@ Part IV : Evaluation
 
 Part V : Parameter adaption 
 
-Part VI : Other file input and output description
+Part VI : Adapting input for your own data
 
 
 -------------------------------------- 
@@ -223,20 +241,25 @@ config.normalization =
 	'std' = standard score (or Z-score) over all values in the sequence, mean = 0 and standard deviation = 1
 	'std_frame' = standard score (or Z-score) for each frame, mean = 0 and standard deviation = 1
 	
+- Number of min / max samples to use (classes with fewer number of samples are filled by minority over sampling, classes with more samples are reduced, adapt this to avoid imbalanced training)
+config.min_number_samples = xxx;
+config.max_number_samples = xxx;
+
+
 - Read the htk book. You can find a lot of usefull hints how to interpret the results and adapt the system to different data corpora and domains.
 
 
 -------------------------------------- 
-Part VI : Other file input and output description
+Part VI : Adapting input for your own data
 --------------------------------------
 
 If you want to run HTK with different input data or on a new dataset, you will have to provide the input data and, if you want to try a different dataset, the segmentation information for each video, a related grammar and a dictionary.
 
 1) Input files
 
-The input files are plain ascii txt-files. Each line contains the input vector of one frame. The first line is zeros, and the first entry of each line is the frame number.
+The input files are plain ascii txt-files. Each line contains the input vector of one frame. The first line is zeros, and the first entry of each line is the frame number. E.g. if you got a 16 dimensional input vector and 330 frames, the overall file would have 331 lines (first line zeros) with 17 entries per line (frame number + input vector): 
 
-0    0    0    0    0    0    0    0    0    0    0    0    0    0    0  ...
+0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0  
 1  <values ...
 2  ... 
 3  ...
@@ -245,9 +268,9 @@ The input files are plain ascii txt-files. Each line contains the input vector o
 6
 .
 .
-.
+330 ...
 
-If you want try your input (e.g. different features, quantization etc.), you just have to convert your frame based representation to the related structure.
+If you want try your input (e.g. different features, quantization etc.), you just have to convert your frame based representation to the related structure and save it as ascii .txt file.
 
 
 2) Segmentation 
@@ -270,8 +293,9 @@ The child node 'MotionLabel' comprises the relevant information:
 - 'name' is the name of the unit and has to be identical to the unit names listed in the dictionary and grammar. 
 - 'startPoint' is the first frame of the unit 
 - 'endPoint' is the last frame of the unit. If no end point is set, it is assumed that the unit ends at the last frame before the beginning of the next unit.  
-Segmentation files need to have the same file name as the corresponding data file.
+Segmentation files need to have the same folder structure + file names as the corresponding data files.
+
 
 3) Dictionary and grammar
 
-If you want to change or write your own dictionary and grammar, please follow the instructions in the HTK book and change the source links in the config.
+If you want to change or write your own dictionary and grammar, please follow the instructions in the HTK book and change the source links in the config. If you need help adapting the code to your system, please contact me under kuehne@iai.uni-bonn.de .
