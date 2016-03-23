@@ -29,7 +29,7 @@ and here:
 http://serre-lab.clps.brown.edu/resource/breakfast-actions-dataset/
 
 If you use this code in your project, please cite:
-
+```
 @InProceedings{Kuehne16end,
 author = {Hilde Kuehne and Juergen Gall and Thomas Serre},
 title = {An end-to-end generative framework for video segmentation and recognition},
@@ -38,7 +38,7 @@ year = {2016},
 month = {Mar},
 address = {Lake Placid},
 }
-
+```
 The code is free for any personal or academic use under GNU-GPL without any warranty. Please regard licensing of third-party packages.
 
 The functions have been tested under Win (with HTK 3.4) and Linux (HTK 3.5). Any questions, comments and recommendations are always welcome. Please contact me under kuehne@iai.uni-bonn.de
