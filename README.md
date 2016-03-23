@@ -72,9 +72,11 @@ Step 3) Download the  training and test data ( https://uni-bonn.sciebo.de/index.
 
 Step 4) Adapt the path in the ./HTK_actionRecognition/matlab_wrapper/get_htk_path.m function to your HTK local configuration.  
 
-Step 5) Adapt the path in the ./HTK_actionRecognition/demo_breakfast/demo_breakfast.m script to the full path of your local configuration  (line 7: path_root = '<YouPathHere>/HTK_actionRecognition/demo_breakfast'; )
-
-Step 6) Run the demo by simply running the script: 
+Step 5) Adapt the path in the ./HTK_actionRecognition/demo_breakfast/demo_breakfast.m (line 7) script to the full path of your local configuration   
+```
+path_root = '<YouPathHere>/HTK_actionRecognition/demo_breakfast'; 
+```
+Step 6) Run the demo by simply running the script ./HTK_actionRecognition/demo_breakfast/demo_breakfast.m : 
 > demo_breakfast
 
 -------------------------------------- 
@@ -90,12 +92,17 @@ Step 2) Download the repository.
 Step 3) Download the corresponding training and test data and unpack them in the related demo directory:
 
 - For demo_breakfast: 
+
   Download breakfast_data.tar.gz (~1 GB) under https://uni-bonn.sciebo.de/index.php/s/lqj3GNVQWXaX1WC
+  
   Unpack to ./HTK_actionRecognition/demo_breakfast/breakfast_data
+  
   File structure should be: 
+```  
   ./HTK_actionRecognition/demo_breakfast/breakfast_data/s1/cereals/...
   ./HTK_actionRecognition/demo_breakfast/breakfast_data/s1/coffee/...
   ./HTK_actionRecognition/demo_breakfast/breakfast_data/s1/freidegg/...  etc.
+```
 
 Step 4) The path to the HTK binaries is hardcoded in the function ./HTK_actionRecognition/matlab_wrapper/get_htk_path.m . Please adapt this function to your local configuration.
 
@@ -134,9 +141,14 @@ In this folder two subfolders, 'generated' and 'output' will be created:
 - 'output' contains:
 	
 	- the HTK hmm file, containing hmm descriptions for each unit: e.g. breakfast_-2sts_1mix_s1.hmms (contains: name_<numberOfStates>sts_<numberOfMixtures>mix_s<split>.hmms)
+	
 	- the reference file, containing the original (loaded) annotations: e.g. demo_breakfast_ref_s1.ref.mlf (contains: name_s<split>.ref.mlf)
+	
 	- the recognition file, containing the recognized units: e.g. demo_breakfast_output_s1.reco.mlf (contains: name_s<split>.reco.mlf)
+	
+	
 	- the dictionary list: e.g. breakfastlist.txt
+	
 	- the test file list: e.g. breakfasttest.list
 
 You can modify the naming of the output by adapting the related variables in the config struct in the get_breakfast_demo_config.m or by overwriting them. 
@@ -198,6 +210,7 @@ The output is the overall sequence recognition accuracy, the confusion matrix as
 
 Input for both is the config and, for the unit evaluation a visualization flag showing the test and recognized sequences on unit level.
 Output of the unit evaluation is as follows:
+```
 	- acc_activity - the accuracy of sequence labels
 	- acc_sequence_all - the accuracy of unit parsing
 	- acc_units_perFrames - the accuracy of frame-based unit evaluation (segmentation accuracy)
@@ -214,16 +227,20 @@ Output of the unit evaluation is as follows:
 		res_all.accuracy_action - accuracy for sequence recognition 
 		res_all.test_label_action - test sequence labels 
 		res_all.predicted_label_action - recognized sequence labels 
-
+```
 
 HTK output details in general:
 
 - The output folder ./HTK_actionRecognition/demo_breakfast/output/breakfast_out contains:
 	
 	- the HTK hmm file with hmm descriptions for each unit: e.g. breakfast_-2sts_1mix_s1.hmms (syntax:  name_<numberOfStates>sts_<numberOfMixtures>mix_s<split>.hmms)
+	
 	- the reference file, containing the original (loaded) annotations: e.g. demo_breakfast_ref_s1.ref.mlf (syntax:  name_s<split>.ref.mlf)
+	
 	- the recognition file, containing the recognized units: e.g. demo_breakfast_output_s1.reco.mlf (syntax:  name_s<split>.reco.mlf)
+	
 	- the dictionary list: e.g. breakfastlist.txt
+	
 	- the test file list: e.g. breakfasttest.list
 
 
@@ -238,23 +255,27 @@ If you want to run HTK on new data, it might be necessary to adapt various eleme
 Most settings are accessible via the config struct. You can either override the values or adapt them in the get_breakfast_demo_config.m files.
 
 - Number of states:
+```
 config.defnumstates = [ -1 = median length of frames, -2 = median linear divided by 10, > 0 fix number of states ]
-
+```
 - Number of Gaussians:
+```
 config.numberOfMixtures = [ 1 ... n ]  
-
+```
 - Normalization:
+```
 config.normalization =
 	'none' = no normalization;
 	'full' = scales all values in the sequence from [0 .. 1];
 	'frame' = scales all values of a frame from [0 .. 1];
 	'std' = standard score (or Z-score) over all values in the sequence, mean = 0 and standard deviation = 1
 	'std_frame' = standard score (or Z-score) for each frame, mean = 0 and standard deviation = 1
-	
+```	
 - Number of min / max samples to use (classes with fewer number of samples are filled by minority over sampling, classes with more samples are reduced, adapt this to avoid imbalanced training)
+```
 config.min_number_samples = xxx;
 config.max_number_samples = xxx;
-
+```
 
 - Read the htk book. You can find a lot of usefull hints how to interpret the results and adapt the system to different data corpora and domains.
 
@@ -302,9 +323,13 @@ The segmentation files are based on the following xml-structure:
 
 The additional header tags are not used and can be omitted if necessary.
 The child node 'MotionLabel' comprises the relevant information: 
+
 - 'name' is the name of the unit and has to be identical to the unit names listed in the dictionary and grammar. 
+
 - 'startPoint' is the first frame of the unit 
+
 - 'endPoint' is the last frame of the unit. If no end point is set, it is assumed that the unit ends at the last frame before the beginning of the next unit.  
+
 Segmentation files need to have the same folder structure + file names as the corresponding data files.
 
 
