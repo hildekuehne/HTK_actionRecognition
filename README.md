@@ -57,7 +57,7 @@ Part IV : Evaluation
 
 Part V : Parameter adaption 
 
-Part VI : Adapting input for your own data
+Part VI : Run your own data
 
 
 -------------------------------------- 
@@ -117,10 +117,9 @@ Step 5) Adjust the script demo_breakfast.m by setting the full path of your loca
 % root folder with this script
 path_root = '<YouPathHere>/HTK_actionRecognition/demo_breakfast';
 ```
---------------------------------------
-Optional Settings: 
-(skip this part if you just want to run the demo)
---------------------------------------
+
+### Optional Settings: (skip this part if you just want to run the demo)
+
 
 Step 5.1)  Adapt folder with the input data (demo_breakfast.m, line 23)
 ```
@@ -281,7 +280,7 @@ config.max_number_samples = xxx;
 
 
 -------------------------------------- 
-Part VI : Adapting input for your own data
+Part VI : Run your own data
 --------------------------------------
 
 If you want to run HTK with different input data or on a new dataset, you will have to provide the input data and, if you want to try a different dataset, the segmentation information for each video, a related grammar and a dictionary.
