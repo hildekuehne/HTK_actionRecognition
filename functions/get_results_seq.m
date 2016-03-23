@@ -96,8 +96,8 @@ try
     %     ref_wrd_list
         x = 0;
         for k=1:1:length(config.unique_action_labels) 
-    %        if sum(strcmp(config.unique_action_labels{k}, ref_wrd_list)) > 0
-           if sum(cellfun(@isempty, strfind(ref_wrd_list, config.unique_action_labels{k})) == 0) > 0
+           if sum(strcmp(config.unique_action_labels{k}, ref_wrd_list)) > 0
+%            if sum(cellfun(@isempty, strfind(ref_wrd_list, config.unique_action_labels{k})) == 0) > 0
                 x = k;
                 break;
            end
@@ -111,8 +111,8 @@ try
     %     recog_wrd_list
         y = 0;
         for k=1:1:length(config.unique_action_labels) 
-    %        if sum(strcmp( config.unique_action_labels{k}, recog_wrd_list )) > 0
-           if  sum(cellfun(@isempty, strfind(recog_wrd_list, config.unique_action_labels{k})) == 0) > 0
+           if sum(strcmp( config.unique_action_labels{k}, recog_wrd_list )) > 0
+%            if  sum(cellfun(@isempty, strc(recog_wrd_list, config.unique_action_labels{k})) == 0) > 0
                config.unique_action_labels{k};
                y = k;
                recog_wrd_list(:);

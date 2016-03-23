@@ -4,7 +4,7 @@
 clear;
 
 % root folder with this script
-path_root = '/media/data/Work/eclipse workspace/HTK_release/demo_breakfast'
+path_root = '/<YourPathHere>/demo_breakfast'
 cd(path_root);
 
 parent_dir = cd(cd('..'))
@@ -59,7 +59,7 @@ config = get_breakfast_demo_config(path_root, path_input, path_gen, path_out)
 cd(path_gen);
 
 % run traing and testing:
-tic;run_htk(config);toc
+run_htk(config);
 
 %% change back
 cd(path_root);
@@ -67,11 +67,31 @@ cd(path_root);
 % evaluation of sequences
 [accuracy_seq, confmat_seq, test_label_seq, predicted_label_seq]  = get_results_seq(config);
 
+disp('Overall activity  accuracy (sequence recognition): ', num2str(accuracy_seq));
+
+disp('ConfMat: ');
+
+confmat_seq
+
+
 % evaluation of units
 vis_on = 0;
-[accuracy_units, acc_unit_parsing, acc_unit_rec, acc_units_perFrames, res_all] = get_results_units(config, vis_on);
+ [acc_activity, acc_sequence_all, acc_units_all, acc_units_perFrames, acc_units_MeanClass, res_all] = get_results_units(config, vis_on)
 
-% clean up
-system(['del /Q "',pwd,'/label/*.*"']);
-system(['del /Q "',pwd,'/tmp/*.lab"']);
+disp('Sequence parsing accuracy: ', num2str(acc_sequence_all));
+
+disp('Unit accuracy based on unit error rate: ', num2str(acc_units_all));
+
+disp('Frame accuracy (mean over frames): ', num2str(acc_units_perFrames));
+
+disp('Frame accuracy (mean over class): ', num2str(acc_units_MeanClass));
+
+if ispc
+    % clean up
+    system(['del /Q "',pwd,'/label/*.*"']);
+    system(['del /Q "',pwd,'/tmp/*.lab"']);
+elseif isunix
+    system(['rm -r -f "',pwd,'/label/*.*"']);
+    system(['rm -r -f "',pwd,'/tmp/*.lab"']);
+end
 

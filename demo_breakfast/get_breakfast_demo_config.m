@@ -117,7 +117,7 @@ config.ref_file = ['', path_out, '/', ref_preface, '_s', num2str(use_split),'.re
 % recogmition_file
 config.recog_file = ['', path_out, '/', output_preface, '_s', num2str(use_split),'.reco.mlf'];
 
-config.defnumstates = -2; % -1 = five prototypes, -2 = linear divided by 7, > 0 fix number of states 
+config.defnumstates = -2; % -1 = five prototypes, -2 = linear divided by 10, > 0 fix number of states 
 config.numberOfMixtures = 1;
 
 %set min / max number of samples to use for training

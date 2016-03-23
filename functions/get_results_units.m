@@ -1,4 +1,4 @@
-function [acc_activity, acc_sequence_all, acc_units_all, acc_units_perFrames, res_all] = get_results_units(config, visualisation_on)
+function [acc_activity, acc_sequence_all, acc_units_all, acc_units_perFrames, acc_units_MeanClass, res_all] = get_results_units(config, visualisation_on)
 %GET_RESULTS_UNITS computes accuracy of unit recognition 
 %
 % Input:
@@ -9,7 +9,8 @@ function [acc_activity, acc_sequence_all, acc_units_all, acc_units_perFrames, re
 % acc_activity - the overall activity (sequence recognition) accuracy 
 % acc_sequence_all - the sequence parsing accuracy (how many units have been recognized correctly after dtw, without evaluation of insertions, substitutions and deletions)
 % acc_units_all - the unit accuracy based on unit error rate including insertions, substitutions and deletions)
-% acc_units_perFrames - the frame based accuracy (also segmentation accurcay)
+% acc_units_perFrames - the frame accuracy as mean over frames 
+% acc_units_MeanClass - the frame accuracy as mean over class
 % res_all - a struct with all results and labels:
 % 		res_all.test_label_units - the test units for each sequence  
 % 		res_all.predicted_label_units - the predicted units for each sequence  
@@ -180,7 +181,7 @@ accuracy_units_perFrames_all  = (sum(cell2mat(test_label_units_perFrames) == cel
 
 [ confMat_units_perFrames, order ] = get_conf_matrix( cell2mat(predicted_label_units_perFrames), cell2mat(test_label_units_perFrames)  );
 confMat_units_perFrames_all  = confMat_units_perFrames; 
-
+accuracy_units_perClass_all = mean(diag(confMat_units_perFrames_all))
 
 % save the details
 res_all.test_label_units  = test_label_units;
@@ -201,6 +202,7 @@ catch ME
     accuracy_sequence_dtw_tmp  = 0;
     accuracy_units_dtw_tmp  = 0;
     accuracy_units_perFrames_all  = 0;
+    accuracy_units_perClass_all  = 0;
     keyboard;
 end
 
@@ -214,6 +216,7 @@ acc_activity = mean(accuracy_action);
 acc_sequence_all = mean(accuracy_sequence_dtw_tmp);
 acc_units_all = mean(accuracy_units_dtw_tmp);
 acc_units_perFrames = mean(accuracy_units_perFrames_all);
+acc_units_MeanClass = mean(accuracy_units_perClass_all);
 
 
 end

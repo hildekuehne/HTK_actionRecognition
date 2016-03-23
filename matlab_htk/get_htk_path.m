@@ -12,4 +12,4 @@ function htkpath = get_htk_path()
 % htkpath = 'C:/YourFolder/htk/bin.win32/';
 
 % local:
-htkpath = '/media/data/HTK/HTK-3.5/htk/bin.cpu/';
+htkpath = '/<YourPathHere>/htk/bin.cpu/';
