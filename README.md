@@ -39,7 +39,7 @@ address = {Lake Placid},
 ```
 The code is free for any personal or academic use under GNU-GPL without any warranty. Please regard licensing of third-party packages.
 
-The functions have been tested under Win (with HTK 3.4) and Linux (HTK 3.5). Any questions, comments and recommendations are always welcome. Please contact me under kuehne@iai.uni-bonn.de
+The functions have been tested under Win (with HTK 3.4) and Linux (HTK 3.5). Any questions, comments and recommendations are always welcome. Please contact me under kuehne @ iai . uni-bonn . de
 
 -------------------------------------- 
 CONTENT:
@@ -334,4 +334,4 @@ Segmentation files need to have the same folder structure + file names as the co
 
 3) Dictionary and grammar
 
-If you want to change or write your own dictionary and grammar, please follow the instructions in the HTK book and change the source links in the config. If you need help adapting the code to your system, please contact me under kuehne@iai.uni-bonn.de .
+If you want to change or write your own dictionary and grammar, please follow the instructions in the HTK book and change the source links in the config. If you need help adapting the code to your system, please contact me under  kuehne @ iai . uni-bonn . de .
