@@ -1,0 +1,12 @@
+<MotionLabeling author="Hilde Kuehne" motionFile="P06\P06_juice.avi.labels" motionFilePathType="first parent" motionFileType=".avi" motionSequenceName="P06" segType="Manual Multi Segmentation" segmentationCriteria="MotionSequenceLabel_ADLDataset_17_12_2010_h.xml"> 
+<Limb name="whole_body"> 
+<MotionLabel name="SIL" startPoint="1" endPoint="56"/> 
+<MotionLabel name="take_glass" startPoint="57" endPoint="151"/> 
+<MotionLabel name="take_knife" startPoint="152" endPoint="199"/> 
+<MotionLabel name="cut_orange" startPoint="200" endPoint="299"/> 
+<MotionLabel name="take_squeezer" startPoint="300" endPoint="324"/> 
+<MotionLabel name="squeeze_orange" startPoint="325" endPoint="980"/> 
+<MotionLabel name="pour_juice" startPoint="981" endPoint="1290"/> 
+<MotionLabel name="SIL" startPoint="1291" endPoint="1318"/> 
+</Limb> 
+</MotionLabeling> 
