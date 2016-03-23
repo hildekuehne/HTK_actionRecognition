@@ -1,0 +1,8 @@
+<MotionLabeling author="Hilde Kuehne" motionFile="P24\P24_coffee.avi.labels" motionFilePathType="first parent" motionFileType=".avi" motionSequenceName="P24" segType="Manual Multi Segmentation" segmentationCriteria="MotionSequenceLabel_ADLDataset_17_12_2010_h.xml"> 
+<Limb name="whole_body"> 
+<MotionLabel name="SIL" startPoint="1" endPoint="1"/> 
+<MotionLabel name="take_cup" startPoint="2" endPoint="141"/> 
+<MotionLabel name="pour_coffee" startPoint="142" endPoint="286"/> 
+<MotionLabel name="SIL" startPoint="287" endPoint="452"/> 
+</Limb> 
+</MotionLabeling> 
