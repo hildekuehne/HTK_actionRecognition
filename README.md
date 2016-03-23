@@ -1,4 +1,4 @@
-
+```
 % Copyright (C) 2014 H. Kuehne
 %
 % This program is free software: you can redistribute it and/or modify
@@ -13,9 +13,7 @@
 %
 % You should have received a copy of the GNU General Public License
 % along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+```
 
 # HTK_actionRecognition
 Matlab demo for action recognition with HTK
@@ -108,22 +106,26 @@ Part II : Set environmental variables
 For the following steps or in case you want to adapt the system to your local configuration, it’s highly recommended to use full path names (!) as the script switches between different directories. You can use relative path names, but make sure, you know what you do. 
 
 Step 5) Adjust the script demo_breakfast.m by setting the full path of your local configuration (demo_breakfast.m, line 7)
-
+```
 % root folder with this script
 path_root = '<YouPathHere>/HTK_actionRecognition/demo_breakfast';
-
+```
 --------------------------------------
 Optional Settings: 
 (skip this part if you just want to run the demo)
 --------------------------------------
 
 Step 5.1)  Adapt folder with the input data (demo_breakfast.m, line 23)
+```
 % folder with the input data
 path_input = fullfile(path_root, 'breakfast_data');
+```
 
 Step 5.2)  Adapt folder for temporary files and output  (demo_breakfast.m, line 26)
+```
 % folder to write temprorary files and output:
 path_output = fullfile(path_root, 'htk_output');
+```
 
 In this folder two subfolders, 'generated' and 'output' will be created:
 
@@ -140,14 +142,18 @@ In this folder two subfolders, 'generated' and 'output' will be created:
 You can modify the naming of the output by adapting the related variables in the config struct in the get_breakfast_demo_config.m or by overwriting them. 
 
 Step 5.3) Set directory with segmentations (demo_breakfast.m, line 51)
+```
 % folder with segmentation files (xml-style)
 config.features_segmentation = fullfile(path_root, '/segmentation');
+```
 
 Step 5.4) Set dictionary and grammar file (demo_breakfast.m, line 53 + 55). 
+```
 % dictionary file
 config.dict_file = fullfile(path_root, '/breakfast.dict');
 % grammar file
 config.grammar_file = fullfile(path_root, '/breakfast.grammar');
+```
 
 ... and you should be good to go!
 If you want to change anything else, just have a look at the config struct.
@@ -161,7 +167,9 @@ Step 6) Run the demo by simply running the script:
 > demo_breakfast
 
 which calls the function:
+```
 run_htk(config);  %  (demo_breakfast.m, line 62)
+```
 
 If all paths are correct, you should see the list of loaded files and the output of htk training and recognition.
 
@@ -177,12 +185,14 @@ Part IV : Evaluation
 The recognized sequences are listed in the output files under ./HTK_actionRecognition/demo_breakfast/output/breakfast_out/demo_breakfast_output_s1.reco.mlf. 
 
 For the evaluation on sequence and unit level you can run:
+```
 % evaluation of sequences
 [accuracy_seq, confmat_seq, test_label_seq, predicted_label_seq]  = get_results_seq(config);
 
 % evaluation of units
 vis_on = 0;
 [accuracy_units, acc_unit_parsing, acc_unit_rec, acc_units_perFrames, res_all] = get_results_units(config, vis_on);
+```
 
 The output is the overall sequence recognition accuracy, the confusion matrix as well as the test and predicted labels of each sequence.
 
@@ -258,7 +268,7 @@ If you want to run HTK with different input data or on a new dataset, you will h
 1) Input files
 
 The input files are plain ascii txt-files. Each line contains the input vector of one frame. The first line is zeros, and the first entry of each line is the frame number. E.g. if you got a 16 dimensional input vector and 330 frames, the overall file would have 331 lines (first line zeros) with 17 entries per line (frame number + input vector): 
-
+```
 0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0  
 1  <values ...
 2  ... 
@@ -269,6 +279,7 @@ The input files are plain ascii txt-files. Each line contains the input vector o
 .
 .
 330 ...
+```
 
 If you want try your input (e.g. different features, quantization etc.), you just have to convert your frame based representation to the related structure and save it as ascii .txt file.
 
@@ -276,7 +287,7 @@ If you want try your input (e.g. different features, quantization etc.), you jus
 2) Segmentation 
 
 The segmentation files are based on the following xml-structure:
-
+```
 <MotionLabeling author=" ... " motionFile=" ... " motionFilePathType=" ... " motionFileType=" ... " motionSequenceName=" ... " segType=" ... " segmentationCriteria=" ... "> 
 <Limb name="whole_body"> 
 <MotionLabel name=" ... " startPoint=" ... " endPoint=" ... "/> 
@@ -286,6 +297,7 @@ The segmentation files are based on the following xml-structure:
 
 </Limb> 
 </MotionLabeling> 
+```
 
 
 The additional header tags are not used and can be omitted if necessary.
