@@ -1,0 +1,12 @@
+<MotionLabeling author="Hilde Kuehne" motionFile="P23\P23_friedegg.avi.labels" motionFilePathType="first parent" motionFileType=".avi" motionSequenceName="P23" segType="Manual Multi Segmentation" segmentationCriteria="MotionSequenceLabel_ADLDataset_17_12_2010_h.xml"> 
+<Limb name="whole_body"> 
+<MotionLabel name="SIL" startPoint="1" endPoint="146"/> 
+<MotionLabel name="pour_oil" startPoint="147" endPoint="360"/> 
+<MotionLabel name="crack_egg" startPoint="361" endPoint="541"/> 
+<MotionLabel name="add_saltnpepper" startPoint="542" endPoint="665"/> 
+<MotionLabel name="fry_egg" startPoint="666" endPoint="2191"/> 
+<MotionLabel name="take_plate" startPoint="2192" endPoint="2281"/> 
+<MotionLabel name="put_egg2plate" startPoint="2282" endPoint="2453"/> 
+<MotionLabel name="SIL" startPoint="2454" endPoint="2515"/> 
+</Limb> 
+</MotionLabeling> 
