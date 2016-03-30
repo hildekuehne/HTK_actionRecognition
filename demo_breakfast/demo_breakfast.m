@@ -78,13 +78,13 @@ confmat_seq
 vis_on = 0;
  [acc_activity, acc_sequence_all, acc_units_all, acc_units_perFrames, acc_units_MeanClass, res_all] = get_results_units(config, vis_on)
 
-disp('Sequence parsing accuracy: ', num2str(acc_sequence_all));
+disp(['Sequence parsing accuracy: ', num2str(acc_sequence_all)]);
 
-disp('Unit accuracy based on unit error rate: ', num2str(acc_units_all));
+disp(['Unit accuracy based on unit error rate: ', num2str(acc_units_all)]);
 
-disp('Frame accuracy (mean over frames): ', num2str(acc_units_perFrames));
+disp(['Frame accuracy (mean over frames): ', num2str(acc_units_perFrames)]);
 
-disp('Frame accuracy (mean over class): ', num2str(acc_units_MeanClass));
+disp(['Frame accuracy (mean over class): ', num2str(acc_units_MeanClass)]);
 
 if ispc
     % clean up
